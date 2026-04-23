@@ -8,7 +8,7 @@ extern "C"{
 #include<libavformat/avformat.h>
 #include<libswscale/swscale.h>
 }
-TaskRead::TaskRead(AVFormatContext* fmt_context,AVCodecContext* cdc_context,ThreadQueue* queue,int stream_idx,QObject *parent) : QObject(parent),m_working_{false},m_packes_{queue},m_stream_idx_{stream_idx}
+TaskRead::TaskRead(AVFormatContext* fmt_context,AVCodecContext* cdc_context,ThreadQueue<AVPacket*>* queue,int stream_idx,QObject *parent) : QObject(parent),m_working_{false},m_packes_{queue},m_stream_idx_{stream_idx}
   ,m_fmt_context_{fmt_context},m_cdc_context_{cdc_context}
 {
 

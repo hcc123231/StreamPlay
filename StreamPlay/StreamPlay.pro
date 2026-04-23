@@ -16,9 +16,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    frameread.cpp \
     main.cpp \
     mainwindow.cpp \
     openglshow.cpp \
+    rtpreceiver.cpp \
     rtsp.cpp \
     rtspclient.cpp \
     rtspreceiver.cpp \
@@ -26,8 +28,10 @@ SOURCES += \
     threadqueue.cpp
 
 HEADERS += \
+    frameread.h \
     mainwindow.h \
     openglshow.h \
+    rtpreceiver.h \
     rtsp.h \
     rtspclient.h \
     rtspreceiver.h \
